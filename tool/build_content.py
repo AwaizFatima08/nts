@@ -15,6 +15,14 @@ PAPERS = BP["papers"]
 PARTIAL = "--partial" in sys.argv
 
 
+# These topics' stems are a bare word or pair, so the paper must say what is being asked.
+INSTRUCTIONS = {
+    ("verbal", "antonym"): "Choose the word most OPPOSITE in meaning to:",
+    ("verbal", "synonym"): "Choose the word CLOSEST in meaning to:",
+    ("verbal", "analogy"): "Choose the pair with the same relationship as:",
+}
+
+
 def load():
     sets, questions = {}, collections.defaultdict(list)
     for path in sorted((ROOT / "content/bank").glob("*/*.jsonl")):
@@ -31,18 +39,24 @@ def load():
     return sets, questions
 
 
+def stem_text(q):
+    prefix = INSTRUCTIONS.get((q["section"], q["topic"]))
+    return f"{prefix}\n{q['stem']}" if prefix else q["stem"]
+
+
 def deal(items, seed):
-    """Splits items across papers so each gets a similar spread of levels. Sets stay whole."""
+    """Splits items across papers so each gets the same spread of levels and topics. Sets stay whole."""
     rng = random.Random(seed)
     groups = collections.OrderedDict()
     for q in items:
         groups.setdefault(q.get("set") or q["id"], []).append(q)
     groups = list(groups.values())
     rng.shuffle(groups)
-    groups.sort(key=lambda g: g[0]["level"])
+    groups.sort(key=lambda g: (g[0]["level"], g[0]["topic"]))
+    start = rng.randrange(PAPERS)  # so the odd extra hard question does not always land on paper 1
     papers = [[] for _ in range(PAPERS)]
     for i, group in enumerate(groups):
-        papers[i % PAPERS].append(group)
+        papers[(start + i) % PAPERS].append(group)
     for p in papers:
         rng.shuffle(p)
     return papers
@@ -64,42 +78,49 @@ def take(groups, count):
     return out
 
 
-def split_quota(total, topics, k):
-    """Largest-remainder split of total across topics by bank weight; `k` rotates who gets the odd question."""
-    weight = sum(t["test"] for t in topics)
-    exact = [total * t["test"] / weight for t in topics]
-    base = [int(x) for x in exact]
-    order = sorted(range(len(topics)), key=lambda i: (-(round(exact[i] - base[i], 6)), (i + k) % len(topics)))
-    for i in order[: total - sum(base)]:
-        base[i] += 1
-    return {t["key"]: b for t, b in zip(topics, base)}
+def check(forms, questions):
+    """Fails the build if a stream repeats a question, the bank is not fully used, or difficulty is lopsided."""
+    level = {q["id"]: q["level"] for items in questions.values() for q in items}
+    used, seen = set(), collections.Counter()
+    for form in forms:
+        ids = [i for part in form["sections"] for i in part["items"]]
+        used.update(ids)
+        for i in ids:
+            seen[(form["mode"], form["stream"], i)] += 1
+        hard = sum(level[i] == 3 for i in ids) / len(ids)
+        if not 0.10 <= hard <= 0.30:
+            sys.exit(f"{form['id']}: {hard:.0%} hard questions is outside 10-30%")
+    repeats = [k for k, n in seen.items() if n > 1]
+    if repeats:
+        sys.exit(f"{len(repeats)} questions repeat within a stream, e.g. {repeats[0]}")
+    unused = {q["id"] for (s, t, pool), items in questions.items() if pool == "test" and s != "ethics" for q in items} - used
+    if unused:
+        sys.exit(f"{len(unused)} test questions never used, e.g. {sorted(unused)[:5]}")
 
 
 def main():
     sets, questions = load()
     sections = {s["key"]: s for s in BP["sections"]}
     dealt = {}
-    for s in BP["sections"]:
-        for t in s["topics"]:
-            key = (s["key"], t["key"])
-            dealt[key] = deal(questions[(s["key"], t["key"], "test")], f"{key}")
+    for sec in BP["sections"]:
+        pool = []
+        for t in sec["topics"]:
+            items = questions[(sec["key"], t["key"], "test")]
+            pool += items
+            dealt[(sec["key"], t["key"])] = deal(items, f"{sec['key']}/{t['key']}")
+        dealt[sec["key"]] = deal(pool, sec["key"])  # whole-section quotas: balanced across its topics
 
     def section_items(section, quota, k):
-        topics = sections[section]["topics"]
-        split = split_quota(quota, topics, k) if isinstance(quota, int) else quota
+        if isinstance(quota, int):
+            items = take(dealt[section][k], quota)
+            if len(items) < quota:
+                raise ValueError(f"{section} short: {len(items)}/{quota} in paper {k + 1}")
+            return items
         items = []
-        for t in topics:
-            want = split.get(t["key"], 0)
-            have = take(dealt[(section, t["key"])][k], want)
-            # A paper can be a question short after rounding: top up from its neighbours' spares.
-            step = 1
-            while len(have) < want and step < PAPERS:
-                ids = {q["id"] for q in have}
-                spare = [q for g in dealt[(section, t["key"])][(k + step) % PAPERS] for q in g[::-1] if q["id"] not in ids and "set" not in q]
-                have += spare[: want - len(have)]
-                step += 1
+        for topic, want in quota.items():
+            have = take(dealt[(section, topic)][k], want)
             if len(have) < want:
-                raise ValueError(f"{section}/{t['key']} short: {len(have)}/{want} in paper {k + 1}")
+                raise ValueError(f"{section}/{topic} short: {len(have)}/{want} in paper {k + 1}")
             items += have
         return items
 
@@ -131,6 +152,8 @@ def main():
                 assert len(ids) == len(set(ids)) == mode["questions"], slug
                 forms.append({"id": slug, "mode": mode_key, "stream": stream_key, "number": k + 1, "title": f"{stream['title']} Test {k + 1}", "minutes": mode["minutes"], "sections": parts})
 
+    if not PARTIAL:
+        check(forms, questions)
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
@@ -139,7 +162,7 @@ def main():
         for t in s["topics"]:
             for pool in ("test", "practice"):
                 for q in questions[(s["key"], t["key"], pool)]:
-                    row = {"id": q["id"], "tp": t["key"], "pl": pool[0], "lv": q["level"], "s": q["stem"], "o": q["options"], "a": q["answer"], "e": q["explanation"]}
+                    row = {"id": q["id"], "tp": t["key"], "pl": pool[0], "lv": q["level"], "s": stem_text(q), "o": q["options"], "a": q["answer"], "e": q["explanation"]}
                     if "set" in q:
                         row["st"] = q["set"]
                         used_sets[q["set"]] = {"t": sets[q["set"]].get("title", ""), "x": sets[q["set"]]["text"]}

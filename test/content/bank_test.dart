@@ -34,6 +34,22 @@ void main() {
     }
   });
 
+  test('there are 20 papers for every mode and stream, with no repeats inside a stream', () {
+    final streams = <String, List<Paper>>{};
+    for (final paper in papers) {
+      (streams['${paper.mode}/${paper.stream}'] ??= []).add(paper);
+    }
+    expect(streams, hasLength(6));
+    for (final MapEntry(:key, :value) in streams.entries) {
+      expect(value, hasLength(20), reason: key);
+      final ids = [
+        for (final paper in value)
+          for (final section in paper.sections) ...section.itemIds,
+      ];
+      expect(ids.toSet(), hasLength(ids.length), reason: key);
+    }
+  });
+
   test('every answer key points at an option', () {
     for (final question in questions.values) {
       expect(

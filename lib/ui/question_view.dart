@@ -5,16 +5,17 @@ import 'package:nts_prep/ui/theme.dart';
 
 /// Shared passage or scenario, collapsible so the question stays in view.
 class SetPanel extends StatefulWidget {
-  const SetPanel({required this.set, super.key});
+  const SetPanel({required this.set, this.startOpen = true, super.key});
 
   final QuestionSet set;
+  final bool startOpen;
 
   @override
   State<SetPanel> createState() => _SetPanelState();
 }
 
 class _SetPanelState extends State<SetPanel> {
-  bool _open = true;
+  late bool _open = widget.startOpen;
 
   @override
   Widget build(BuildContext context) => Card(
@@ -65,10 +66,13 @@ class QuestionTable extends StatelessWidget {
 
 /// The passage (if any), table (if any) and stem of a question.
 class QuestionHeader extends StatelessWidget {
-  const QuestionHeader({required this.question, this.set, super.key});
+  const QuestionHeader({required this.question, this.set, this.passageOpen = true, super.key});
 
   final Question question;
   final QuestionSet? set;
+
+  /// Whether a shared passage starts expanded; collapsed in review, where it repeats.
+  final bool passageOpen;
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +80,8 @@ class QuestionHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        if (set case final panel?) SetPanel(key: ValueKey(question.setId), set: panel),
+        if (set case final panel?)
+          SetPanel(key: ValueKey(question.setId), set: panel, startOpen: passageOpen),
         if (table != null) QuestionTable(rows: table),
         const SizedBox(height: AppSpacing.sm),
         Text(question.stem, style: Theme.of(context).textTheme.titleMedium),

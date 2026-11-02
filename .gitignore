@@ -49,3 +49,4 @@ app.*.map.json
 android/key.properties
 scripts/backup.log
 __pycache__/
+releases/

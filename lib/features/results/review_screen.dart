@@ -42,7 +42,7 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
             if (_matches(questions[i], exam.attempt.answers)) i,
         ];
         return Scaffold(
-          appBar: AppBar(title: Text(l10n.reviewAnswers)),
+          appBar: AppBar(title: Text(l10n.reviewTitle)),
           body: Column(
             children: [
               Padding(
@@ -102,7 +102,11 @@ class _ReviewItem extends StatelessWidget {
             chosen == null ? '$number · ${context.l10n.notAnswered}' : '$number',
             style: Theme.of(context).textTheme.labelLarge,
           ),
-          QuestionHeader(question: question, set: exam.sitting.sets[question.setId]),
+          QuestionHeader(
+            question: question,
+            set: exam.sitting.sets[question.setId],
+            passageOpen: false,
+          ),
           for (var i = 0; i < question.options.length; i++)
             OptionBubble(index: i, text: question.options[i], mark: _mark(i, chosen)),
           ExplanationBox(text: question.explanation),

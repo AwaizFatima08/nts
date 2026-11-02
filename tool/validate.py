@@ -110,10 +110,11 @@ def main():
             sid = row.get("set")
             if sid:
                 used_sets.append((where, qid, sid, sink))
-            key = (norm(row.get("stem", "")), sid or "")
-            if key in stems and topic not in ("synonym", "antonym"):
-                sink.append(f"{where}: same stem as {stems[key]}")
-            if topic in ("synonym", "antonym") and key in stems:
+            # Exact symbol-aware match; "Which sentence is correct?" items differ only in their options.
+            key = (re.sub(r"\s+", " ", row.get("stem", "").lower()).strip(), sid or "")
+            if topic == "error-correction":
+                key += (re.sub(r"\s+", " ", " ".join(sorted(row.get("options", []))).lower()),)
+            if key in stems:
                 sink.append(f"{where}: same stem as {stems[key]}")
             stems[key] = qid
             counts[(section, topic, row.get("pool"))] += 1

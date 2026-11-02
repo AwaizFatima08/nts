@@ -1,17 +1,8 @@
-# nts_prep
+# Prep Simulator for NTS
 
-Prep Simulator for NTS: NAT, GAT and recruitment mock tests by HomiLabs.
+A free Android app by [HomiLabs](https://homilabs.org): 20 full-length timed mock tests each for NAT (IE, IM, ICS, IA), GAT General and recruitment-style NTS tests, with topic practice, explanations and guidance. Independent practice material, not affiliated with the National Testing Service.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- App: Flutter, in `lib/`. Project notes: `CLAUDE.md`.
+- Question bank: `content/bank/`, built into `assets/data/` by `tool/build_content.py`.
+- Website: `website/`, live at https://nts.homilabs.org.
+- Release and hosting: `docs/release-and-hosting.md`.
