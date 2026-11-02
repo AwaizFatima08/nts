@@ -3,7 +3,7 @@
 ## Build
 - Package `com.homilabs.nts_prep` (locked after the first Play upload). Version 1.0.0 (versionCode 1).
 - Build: `jobq run --name nts-release-aab -- flutter build appbundle --release`, then `./gradlew --stop` in `android/`.
-- Bundle: `releases/v1.0.0-1/nts-prep-1.0.0-1.aab` (49 MB, local and Drive only). SHA-256 `47976970e498c05eea393ff75ec907cf22ab9a4e41d64752954f9c8108f68274`.
+- Bundle: `releases/v1.0.0-1/nts-prep-1.0.0-1.aab` (49 MB, local and Drive only). SHA-256 `3e414afe62fc913a7aa310590ee1f02516f63c22153a8cd3689b6d688bb9975c` (rebuilt 2 Nov 2026 with the About screen's Privacy choices link; the earlier build was never uploaded).
 - Upload key SHA-1: `58:65:D1:36:B7:E1:45:FD:77:45:62:11:D0:86:48:54:2C:C1:12:10`.
 - Before every release: `bash scripts/check-release-ad-ids.sh`, `python3 tool/validate.py`, `flutter test`.
 - Signing: `android/key.properties` → `.secrets/nts-upload.keystore` (credentials in `.secrets/nts-upload-keystore-credentials.txt`). `.secrets/` is in the local and Drive backups, not in GitHub. Losing it means a support request to Google.

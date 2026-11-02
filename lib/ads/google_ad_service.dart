@@ -44,6 +44,17 @@ class GoogleAdService implements AdService {
     _loadInterstitial();
   }
 
+  @override
+  Future<bool> privacyChoicesRequired() async {
+    final status = await ConsentInformation.instance.getPrivacyOptionsRequirementStatus();
+    return status == PrivacyOptionsRequirementStatus.required;
+  }
+
+  @override
+  Future<void> showPrivacyChoices() => ConsentForm.showPrivacyOptionsForm((error) {
+    if (error != null) debugPrint('Privacy choices: ${error.message}');
+  });
+
   void _loadInterstitial() {
     unawaited(
       InterstitialAd.load(

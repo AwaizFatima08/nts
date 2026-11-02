@@ -530,6 +530,12 @@ abstract class AppLocalizations {
   /// **'Privacy policy'**
   String get privacy;
 
+  /// No description provided for @privacyChoices.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy choices'**
+  String get privacyChoices;
+
   /// No description provided for @terms.
   ///
   /// In en, this message translates to:

@@ -1,11 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nts_prep/ads/ad_service.dart';
 import 'package:nts_prep/app.dart';
 import 'package:nts_prep/ui/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class AboutScreen extends StatelessWidget {
+class AboutScreen extends ConsumerWidget {
   const AboutScreen({super.key});
 
   static const _site = 'https://nts.homilabs.org';
@@ -13,8 +15,9 @@ class AboutScreen extends StatelessWidget {
   void _open(String url) => unawaited(launchUrl(Uri.parse(url)));
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = context.l10n;
+    final choicesRequired = ref.watch(privacyChoicesRequiredProvider).value ?? false;
     return Scaffold(
       appBar: AppBar(title: Text(l10n.about)),
       body: ListView(
@@ -27,6 +30,11 @@ class AboutScreen extends StatelessWidget {
           const SizedBox(height: AppSpacing.md),
           ListTile(title: Text(l10n.website), onTap: () => _open(_site)),
           ListTile(title: Text(l10n.privacy), onTap: () => _open('$_site/privacy.html')),
+          if (choicesRequired)
+            ListTile(
+              title: Text(l10n.privacyChoices),
+              onTap: () => unawaited(ref.read(adServiceProvider).showPrivacyChoices()),
+            ),
           ListTile(title: Text(l10n.terms), onTap: () => _open('$_site/terms.html')),
           ListTile(title: Text(l10n.contact)),
         ],
