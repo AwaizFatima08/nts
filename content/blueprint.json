@@ -1,0 +1,862 @@
+{
+ "sections": [
+  {
+   "key": "verbal",
+   "title": "English / Verbal",
+   "topics": [
+    {
+     "key": "sentence-completion",
+     "prefix": "sc",
+     "title": "Sentence Completion",
+     "test": 160,
+     "practice": 15,
+     "scope": "One or two blanks; vocabulary in context and logic of the sentence."
+    },
+    {
+     "key": "analogy",
+     "prefix": "an",
+     "title": "Analogies",
+     "test": 120,
+     "practice": 15,
+     "scope": "WORD : WORD pairs; state the relationship in the explanation."
+    },
+    {
+     "key": "antonym",
+     "prefix": "at",
+     "title": "Antonyms",
+     "test": 100,
+     "practice": 15,
+     "scope": "Word most opposite in meaning."
+    },
+    {
+     "key": "synonym",
+     "prefix": "sy",
+     "title": "Synonyms",
+     "test": 100,
+     "practice": 15,
+     "scope": "Word closest in meaning."
+    },
+    {
+     "key": "comprehension",
+     "prefix": "rc",
+     "title": "Reading Comprehension",
+     "test": 120,
+     "practice": 18,
+     "scope": "Sets: one original passage of 150-220 words with 6 questions (main idea, detail, inference, tone, vocabulary in context)."
+    },
+    {
+     "key": "error-correction",
+     "prefix": "ec",
+     "title": "Grammar and Sentence Correction",
+     "test": 100,
+     "practice": 15,
+     "scope": "Spot the error or pick the correct sentence: tense, agreement, prepositions, articles, parallelism."
+    }
+   ]
+  },
+  {
+   "key": "analytical",
+   "title": "Analytical Reasoning",
+   "topics": [
+    {
+     "key": "scenario",
+     "prefix": "pz",
+     "title": "Scenario Puzzles",
+     "test": 300,
+     "practice": 25,
+     "scope": "Sets: a short arrangement, ordering, grouping or scheduling scenario with its rules, followed by 5 questions."
+    },
+    {
+     "key": "critical-reasoning",
+     "prefix": "cr",
+     "title": "Statements: Critical Reasoning",
+     "test": 100,
+     "practice": 15,
+     "scope": "Short statement; find the assumption, conclusion, strengthener or weakener."
+    },
+    {
+     "key": "syllogism",
+     "prefix": "lg",
+     "title": "Syllogisms and Deduction",
+     "test": 80,
+     "practice": 15,
+     "scope": "Which conclusion must follow from the statements."
+    },
+    {
+     "key": "series",
+     "prefix": "se",
+     "title": "Number and Letter Series",
+     "test": 80,
+     "practice": 15,
+     "scope": "Next term or missing term; the rule stated in the explanation."
+    },
+    {
+     "key": "coding",
+     "prefix": "cd",
+     "title": "Coding and Decoding",
+     "test": 60,
+     "practice": 15,
+     "scope": "Letter or number codes."
+    },
+    {
+     "key": "relations-direction",
+     "prefix": "rd",
+     "title": "Blood Relations and Directions",
+     "test": 80,
+     "practice": 15,
+     "scope": "Family relationships and direction-sense problems."
+    }
+   ]
+  },
+  {
+   "key": "quant",
+   "title": "Quantitative",
+   "topics": [
+    {
+     "key": "number-system",
+     "prefix": "nm",
+     "title": "Number System",
+     "test": 60,
+     "practice": 15,
+     "scope": "Factors, HCF/LCM, fractions, decimals, order of operations, divisibility."
+    },
+    {
+     "key": "percentage",
+     "prefix": "pc",
+     "title": "Percentages",
+     "test": 60,
+     "practice": 15,
+     "scope": "Percentage change, successive change, comparisons."
+    },
+    {
+     "key": "ratio",
+     "prefix": "ra",
+     "title": "Ratio and Proportion",
+     "test": 60,
+     "practice": 15,
+     "scope": "Ratios, sharing, direct and inverse proportion, mixtures."
+    },
+    {
+     "key": "average",
+     "prefix": "av",
+     "title": "Averages",
+     "test": 40,
+     "practice": 15,
+     "scope": "Means, weighted averages, age problems."
+    },
+    {
+     "key": "speed-work",
+     "prefix": "sw",
+     "title": "Speed, Time and Work",
+     "test": 60,
+     "practice": 15,
+     "scope": "Distance, relative speed, pipes and work rates."
+    },
+    {
+     "key": "profit-interest",
+     "prefix": "pi",
+     "title": "Profit, Loss and Interest",
+     "test": 40,
+     "practice": 15,
+     "scope": "Cost, sale, discount, simple and compound interest."
+    },
+    {
+     "key": "algebra",
+     "prefix": "ag",
+     "title": "Algebra",
+     "test": 100,
+     "practice": 15,
+     "scope": "Linear and quadratic equations, simplification, exponents, inequalities, word problems."
+    },
+    {
+     "key": "geometry",
+     "prefix": "ge",
+     "title": "Geometry",
+     "test": 80,
+     "practice": 15,
+     "scope": "Angles, triangles, circles, area, perimeter, volume, described fully in words without figures."
+    },
+    {
+     "key": "data",
+     "prefix": "dt",
+     "title": "Statistics and Data Interpretation",
+     "test": 60,
+     "practice": 15,
+     "scope": "Use the optional `table` field; mean, median, mode, reading a table."
+    },
+    {
+     "key": "probability",
+     "prefix": "pb",
+     "title": "Probability and Counting",
+     "test": 40,
+     "practice": 15,
+     "scope": "Simple probability and basic counting."
+    }
+   ]
+  },
+  {
+   "key": "physics",
+   "title": "Physics",
+   "topics": [
+    {
+     "key": "mechanics",
+     "prefix": "pm",
+     "title": "Mechanics",
+     "test": 50,
+     "practice": 10,
+     "scope": "Vectors, kinematics, forces, circular motion, work, energy, power, fluids."
+    },
+    {
+     "key": "waves",
+     "prefix": "pw",
+     "title": "Oscillations, Waves and Sound",
+     "test": 30,
+     "practice": 10,
+     "scope": "SHM, waves, sound, Doppler effect."
+    },
+    {
+     "key": "heat",
+     "prefix": "ph",
+     "title": "Heat and Thermodynamics",
+     "test": 20,
+     "practice": 10,
+     "scope": "Kinetic theory, laws of thermodynamics."
+    },
+    {
+     "key": "electricity",
+     "prefix": "pe",
+     "title": "Electricity and Magnetism",
+     "test": 50,
+     "practice": 10,
+     "scope": "Electrostatics, current, magnetism, EM induction, AC."
+    },
+    {
+     "key": "optics",
+     "prefix": "po",
+     "title": "Optics",
+     "test": 20,
+     "practice": 10,
+     "scope": "Reflection, refraction, lenses, interference, diffraction."
+    },
+    {
+     "key": "modern",
+     "prefix": "pn",
+     "title": "Modern Physics",
+     "test": 30,
+     "practice": 10,
+     "scope": "Quantum ideas, atomic and nuclear physics, electronics."
+    }
+   ]
+  },
+  {
+   "key": "chemistry",
+   "title": "Chemistry",
+   "topics": [
+    {
+     "key": "basics",
+     "prefix": "cb",
+     "title": "Basic Concepts and Atomic Structure",
+     "test": 40,
+     "practice": 10,
+     "scope": "Mole, stoichiometry, states of matter, atomic structure."
+    },
+    {
+     "key": "physical",
+     "prefix": "cp",
+     "title": "Physical Chemistry",
+     "test": 50,
+     "practice": 10,
+     "scope": "Bonding, equilibrium, kinetics, thermochemistry, electrochemistry, solutions."
+    },
+    {
+     "key": "inorganic",
+     "prefix": "ci",
+     "title": "Inorganic Chemistry",
+     "test": 50,
+     "practice": 10,
+     "scope": "Periodic table, s/p/d block, industrial chemistry."
+    },
+    {
+     "key": "organic",
+     "prefix": "co",
+     "title": "Organic Chemistry",
+     "test": 60,
+     "practice": 10,
+     "scope": "Hydrocarbons, functional groups, reaction types, biomolecules, polymers."
+    }
+   ]
+  },
+  {
+   "key": "math",
+   "title": "Mathematics",
+   "topics": [
+    {
+     "key": "algebra",
+     "prefix": "ma",
+     "title": "Algebra",
+     "test": 60,
+     "practice": 10,
+     "scope": "Functions, quadratics, sequences, matrices, permutations, binomial theorem."
+    },
+    {
+     "key": "trigonometry",
+     "prefix": "mt",
+     "title": "Trigonometry",
+     "test": 40,
+     "practice": 10,
+     "scope": "Identities, equations, inverse functions."
+    },
+    {
+     "key": "calculus",
+     "prefix": "mc",
+     "title": "Calculus",
+     "test": 60,
+     "practice": 10,
+     "scope": "Limits, differentiation, integration, applications."
+    },
+    {
+     "key": "analytic-geometry",
+     "prefix": "mg",
+     "title": "Analytic Geometry and Vectors",
+     "test": 40,
+     "practice": 10,
+     "scope": "Lines, circles, conics, vectors."
+    }
+   ]
+  },
+  {
+   "key": "biology",
+   "title": "Biology",
+   "topics": [
+    {
+     "key": "cell",
+     "prefix": "bc",
+     "title": "Cell Biology and Biomolecules",
+     "test": 60,
+     "practice": 10,
+     "scope": "Cell structure, enzymes, biomolecules, bioenergetics."
+    },
+    {
+     "key": "diversity",
+     "prefix": "bd",
+     "title": "Diversity of Life",
+     "test": 70,
+     "practice": 10,
+     "scope": "Classification, kingdoms, plants, animals, ecology."
+    },
+    {
+     "key": "physiology",
+     "prefix": "bp",
+     "title": "Human Physiology",
+     "test": 90,
+     "practice": 10,
+     "scope": "Digestion, circulation, respiration, excretion, nervous and endocrine systems, immunity, reproduction."
+    },
+    {
+     "key": "genetics",
+     "prefix": "bg",
+     "title": "Genetics and Evolution",
+     "test": 60,
+     "practice": 10,
+     "scope": "Inheritance, DNA, biotechnology, evolution."
+    }
+   ]
+  },
+  {
+   "key": "computer",
+   "title": "Computer Science",
+   "topics": [
+    {
+     "key": "intro",
+     "prefix": "ic",
+     "title": "Introduction to Computers",
+     "test": 80,
+     "practice": 15,
+     "scope": "Hardware, software, memory, number systems, networks, security."
+    },
+    {
+     "key": "programming",
+     "prefix": "ip",
+     "title": "Programming Fundamentals",
+     "test": 60,
+     "practice": 15,
+     "scope": "Language-neutral and C/C++ basics: variables, control flow, arrays, functions, tracing output."
+    },
+    {
+     "key": "database",
+     "prefix": "id",
+     "title": "Database Fundamentals",
+     "test": 60,
+     "practice": 15,
+     "scope": "Tables, keys, relationships, normalisation, basic SQL."
+    }
+   ]
+  },
+  {
+   "key": "gk",
+   "title": "General Knowledge",
+   "topics": [
+    {
+     "key": "world",
+     "prefix": "gw",
+     "title": "World Affairs and History",
+     "test": 100,
+     "practice": 12,
+     "scope": "Stable facts only: organisations, treaties, world history, firsts."
+    },
+    {
+     "key": "science",
+     "prefix": "gs",
+     "title": "Everyday Science",
+     "test": 70,
+     "practice": 12,
+     "scope": "Inventions, human body, environment, space, technology."
+    },
+    {
+     "key": "geography",
+     "prefix": "gg",
+     "title": "World Geography",
+     "test": 70,
+     "practice": 12,
+     "scope": "Continents, oceans, capitals, currencies, landmarks."
+    },
+    {
+     "key": "civics",
+     "prefix": "gc",
+     "title": "Economy and Civics",
+     "test": 60,
+     "practice": 12,
+     "scope": "Basic economics, government, abbreviations, international bodies."
+    }
+   ]
+  },
+  {
+   "key": "islamic",
+   "title": "Islamic Studies",
+   "topics": [
+    {
+     "key": "quran",
+     "prefix": "iq",
+     "title": "Quran",
+     "test": 70,
+     "practice": 12,
+     "scope": "Revelation, compilation, surahs, stories of the prophets, teachings."
+    },
+    {
+     "key": "hadith",
+     "prefix": "ih",
+     "title": "Hadith and Sunnah",
+     "test": 40,
+     "practice": 12,
+     "scope": "Compilers, the major collections, well-known teachings."
+    },
+    {
+     "key": "beliefs",
+     "prefix": "ib",
+     "title": "Beliefs and Pillars",
+     "test": 90,
+     "practice": 12,
+     "scope": "Tawhid, prophethood, the hereafter, prayer, fasting, zakat, Hajj."
+    },
+    {
+     "key": "seerah",
+     "prefix": "is",
+     "title": "Seerah",
+     "test": 60,
+     "practice": 12,
+     "scope": "Life of the Holy Prophet (PBUH), key events and dates."
+    },
+    {
+     "key": "history",
+     "prefix": "ir",
+     "title": "Rightly Guided Caliphs and Islamic History",
+     "test": 40,
+     "practice": 12,
+     "scope": "The four caliphs, early battles, Muslim contributions."
+    }
+   ]
+  },
+  {
+   "key": "pakistan",
+   "title": "Pakistan Studies",
+   "topics": [
+    {
+     "key": "movement",
+     "prefix": "km",
+     "title": "Pakistan Movement",
+     "test": 90,
+     "practice": 12,
+     "scope": "1857 to 1947, leaders, resolutions, sessions, dates."
+    },
+    {
+     "key": "constitution",
+     "prefix": "kc",
+     "title": "Constitution and Government",
+     "test": 40,
+     "practice": 12,
+     "scope": "1956, 1962 and 1973 constitutions, structure of the state. Stable facts, no office holders."
+    },
+    {
+     "key": "geography",
+     "prefix": "kg",
+     "title": "Geography of Pakistan",
+     "test": 40,
+     "practice": 12,
+     "scope": "Provinces, rivers, mountains, passes, dams, neighbours."
+    },
+    {
+     "key": "culture",
+     "prefix": "ke",
+     "title": "Culture and Economy",
+     "test": 30,
+     "practice": 12,
+     "scope": "National symbols, languages, heritage sites, resources, industries."
+    }
+   ]
+  },
+  {
+   "key": "ethics",
+   "title": "Ethics",
+   "topics": [
+    {
+     "key": "ethics",
+     "prefix": "et",
+     "title": "Ethics (option for non-Muslim candidates)",
+     "test": 150,
+     "practice": 20,
+     "scope": "Honesty, justice, duty, tolerance, citizenship, professional conduct, major world religions' shared moral teaching."
+    }
+   ]
+  }
+ ],
+ "modes": {
+  "nat": {
+   "title": "NAT",
+   "subtitle": "National Aptitude Test",
+   "minutes": 120,
+   "questions": 90,
+   "streams": {
+    "ie": {
+     "title": "NAT-IE (Pre-Engineering)",
+     "sections": [
+      {
+       "section": "verbal",
+       "quota": {
+        "sentence-completion": 5,
+        "analogy": 3,
+        "antonym": 4,
+        "comprehension": 5,
+        "synonym": 3
+       }
+      },
+      {
+       "section": "analytical",
+       "quota": {
+        "scenario": 12,
+        "critical-reasoning": 3,
+        "syllogism": 2,
+        "series": 1,
+        "coding": 1,
+        "relations-direction": 1
+       }
+      },
+      {
+       "section": "quant",
+       "quota": {
+        "number-system": 2,
+        "percentage": 3,
+        "ratio": 2,
+        "average": 2,
+        "speed-work": 2,
+        "profit-interest": 2,
+        "algebra": 4,
+        "geometry": 3
+       }
+      },
+      {
+       "section": "physics",
+       "quota": 10
+      },
+      {
+       "section": "chemistry",
+       "quota": 10
+      },
+      {
+       "section": "math",
+       "quota": 10
+      }
+     ]
+    },
+    "im": {
+     "title": "NAT-IM (Pre-Medical)",
+     "sections": [
+      {
+       "section": "verbal",
+       "quota": {
+        "sentence-completion": 5,
+        "analogy": 3,
+        "antonym": 4,
+        "comprehension": 5,
+        "synonym": 3
+       }
+      },
+      {
+       "section": "analytical",
+       "quota": {
+        "scenario": 12,
+        "critical-reasoning": 3,
+        "syllogism": 2,
+        "series": 1,
+        "coding": 1,
+        "relations-direction": 1
+       }
+      },
+      {
+       "section": "quant",
+       "quota": {
+        "number-system": 2,
+        "percentage": 3,
+        "ratio": 2,
+        "average": 2,
+        "speed-work": 2,
+        "profit-interest": 2,
+        "algebra": 4,
+        "geometry": 3
+       }
+      },
+      {
+       "section": "physics",
+       "quota": 8
+      },
+      {
+       "section": "chemistry",
+       "quota": 8
+      },
+      {
+       "section": "biology",
+       "quota": 14
+      }
+     ]
+    },
+    "ics": {
+     "title": "NAT-ICS (Computer Science)",
+     "sections": [
+      {
+       "section": "verbal",
+       "quota": {
+        "sentence-completion": 5,
+        "analogy": 3,
+        "antonym": 4,
+        "comprehension": 5,
+        "synonym": 3
+       }
+      },
+      {
+       "section": "analytical",
+       "quota": {
+        "scenario": 12,
+        "critical-reasoning": 3,
+        "syllogism": 2,
+        "series": 1,
+        "coding": 1,
+        "relations-direction": 1
+       }
+      },
+      {
+       "section": "quant",
+       "quota": {
+        "number-system": 2,
+        "percentage": 3,
+        "ratio": 2,
+        "average": 2,
+        "speed-work": 2,
+        "profit-interest": 2,
+        "algebra": 4,
+        "geometry": 3
+       }
+      },
+      {
+       "section": "physics",
+       "quota": 10
+      },
+      {
+       "section": "math",
+       "quota": 10
+      },
+      {
+       "section": "computer",
+       "quota": {
+        "intro": 4,
+        "programming": 3,
+        "database": 3
+       }
+      }
+     ]
+    },
+    "ia": {
+     "title": "NAT-IA (Arts)",
+     "sections": [
+      {
+       "section": "verbal",
+       "quota": {
+        "sentence-completion": 5,
+        "analogy": 3,
+        "antonym": 4,
+        "comprehension": 5,
+        "synonym": 3
+       }
+      },
+      {
+       "section": "analytical",
+       "quota": {
+        "scenario": 12,
+        "critical-reasoning": 3,
+        "syllogism": 2,
+        "series": 1,
+        "coding": 1,
+        "relations-direction": 1
+       }
+      },
+      {
+       "section": "quant",
+       "quota": {
+        "number-system": 2,
+        "percentage": 3,
+        "ratio": 2,
+        "average": 2,
+        "speed-work": 2,
+        "profit-interest": 2,
+        "algebra": 4,
+        "geometry": 3
+       }
+      },
+      {
+       "section": "islamic",
+       "quota": 10
+      },
+      {
+       "section": "pakistan",
+       "quota": 10
+      },
+      {
+       "section": "gk",
+       "quota": 10
+      }
+     ]
+    }
+   }
+  },
+  "gat": {
+   "title": "GAT General",
+   "subtitle": "Graduate Assessment Test",
+   "minutes": 120,
+   "questions": 100,
+   "streams": {
+    "general": {
+     "title": "GAT General",
+     "sections": [
+      {
+       "section": "verbal",
+       "quota": {
+        "sentence-completion": 8,
+        "analogy": 6,
+        "antonym": 5,
+        "synonym": 5,
+        "comprehension": 6,
+        "error-correction": 5
+       }
+      },
+      {
+       "section": "analytical",
+       "quota": {
+        "scenario": 15,
+        "critical-reasoning": 5,
+        "syllogism": 4,
+        "series": 4,
+        "coding": 3,
+        "relations-direction": 4
+       }
+      },
+      {
+       "section": "quant",
+       "quota": {
+        "number-system": 3,
+        "percentage": 3,
+        "ratio": 3,
+        "average": 2,
+        "speed-work": 3,
+        "profit-interest": 2,
+        "algebra": 5,
+        "geometry": 4,
+        "data": 3,
+        "probability": 2
+       }
+      }
+     ]
+    }
+   }
+  },
+  "rec": {
+   "title": "Recruitment",
+   "subtitle": "Job tests (typical pattern)",
+   "minutes": 120,
+   "questions": 100,
+   "streams": {
+    "general": {
+     "title": "Recruitment",
+     "sections": [
+      {
+       "section": "verbal",
+       "quota": {
+        "sentence-completion": 6,
+        "analogy": 2,
+        "antonym": 4,
+        "synonym": 4,
+        "comprehension": 5,
+        "error-correction": 4
+       }
+      },
+      {
+       "section": "quant",
+       "quota": {
+        "number-system": 3,
+        "percentage": 3,
+        "ratio": 2,
+        "average": 2,
+        "speed-work": 2,
+        "profit-interest": 2,
+        "algebra": 3,
+        "geometry": 1,
+        "data": 2
+       }
+      },
+      {
+       "section": "analytical",
+       "quota": {
+        "scenario": 5,
+        "critical-reasoning": 2,
+        "syllogism": 2,
+        "series": 2,
+        "coding": 2,
+        "relations-direction": 2
+       }
+      },
+      {
+       "section": "gk",
+       "quota": 15
+      },
+      {
+       "section": "islamic",
+       "quota": 15
+      },
+      {
+       "section": "pakistan",
+       "quota": 10
+      }
+     ]
+    }
+   }
+  }
+ },
+ "papers": 20
+}

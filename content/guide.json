@@ -1,0 +1,183 @@
+{
+ "articles": [
+  {
+   "id": "tests",
+   "group": "Start here",
+   "title": "Which NTS test do you need?",
+   "lines": [
+    "NTS (National Testing Service) runs several different tests. Check your university's admission notice or the job advertisement to see which one applies to you.",
+    "## NAT: National Aptitude Test",
+    "For admission after intermediate (12 years of education) or after a bachelor's (14 years). There is a separate paper for each group of study. This app covers four 12-year papers: NAT-IE (Pre-Engineering), NAT-IM (Pre-Medical), NAT-ICS (Computer Science) and NAT-IA (Arts).",
+    "## GAT General: Graduate Assessment Test",
+    "Usually needed for MS, MPhil and PhD admission. It tests English, analytical and quantitative reasoning, with no subject section.",
+    "## Recruitment tests",
+    "NTS also tests candidates for jobs. Each employer sets its own syllabus and pattern, usually a mix of English, maths, analytical reasoning, general knowledge, Islamic Studies and Pakistan Studies, and often a job-related subject. The Recruitment tests here follow a typical mix.",
+    "Patterns can change. Your own test notice and roll number slip always come first."
+   ]
+  },
+  {
+   "id": "patterns",
+   "group": "Start here",
+   "title": "Test patterns at a glance",
+   "lines": [
+    "## NAT (12 years of education)",
+    "90 questions in 120 minutes, according to the pattern published by NTS.",
+    "- English 20: sentence completion 5, analogy 3, antonym 4, comprehension 5, synonym 3",
+    "- Analytical 20: scenario-based 12, statement-based 8",
+    "- Quantitative 20: arithmetic 13, algebra 4, geometry 3",
+    "- Subject 30: depends on your group",
+    "- NAT-IE: Physics 10, Chemistry 10, Mathematics 10",
+    "- NAT-IM: Physics 8, Chemistry 8, Biology 14",
+    "- NAT-ICS: Physics 10, Mathematics 10, Computer 10",
+    "- NAT-IA: Islamiyat or Ethics 10, Pakistan Studies 10, General Knowledge 10",
+    "## GAT General",
+    "Commonly described as 100 questions in 120 minutes: about 35 verbal, 35 analytical and 30 quantitative. This split comes from preparation sources, not from NTS, so confirm it in your notice.",
+    "## Recruitment (typical)",
+    "100 questions in 120 minutes in this app: English 25, Quantitative 20, Analytical 15, General Knowledge 15, Islamic Studies or Ethics 15, Pakistan Studies 10.",
+    "## Negative marking",
+    "Preparation sources report no negative marking on NAT and GAT, and this app does not deduct marks. If your notice says otherwise, skip the questions you cannot narrow down."
+   ]
+  },
+  {
+   "id": "plan",
+   "group": "Study plan",
+   "title": "An eight-week plan",
+   "lines": [
+    "## Weeks 1 and 2: find your level",
+    "- Take one full test under real timing, before you study anything",
+    "- Read the results by section and list your three weakest topics",
+    "- Start a vocabulary notebook: ten new words a day",
+    "## Weeks 3 to 6: build skills",
+    "- Practise one weak topic a day in short sets",
+    "- Read every explanation, even for questions you got right",
+    "- Take one full test each week, and spend as long reviewing it as you spent sitting it",
+    "- Revise maths rules: percentages, ratios, averages, speed and work",
+    "## Weeks 7 and 8: test practice",
+    "- Take two or three full tests a week at the same time of day as your real test",
+    "- Stop learning new topics in the last three days",
+    "- Sleep properly the night before"
+   ]
+  },
+  {
+   "id": "crash",
+   "group": "Study plan",
+   "title": "Only two weeks left?",
+   "lines": [
+    "- Take one full test on the first day to find where the easiest marks are",
+    "- English and analytical reasoning usually improve fastest with practice, so start there",
+    "- For group subjects, revise key formulas and definitions instead of reading whole chapters",
+    "- Take a full test every second day and review it the same day",
+    "- Practise the weakest topic for 30 minutes each day"
+   ]
+  },
+  {
+   "id": "time",
+   "group": "Test day",
+   "title": "Managing your time",
+   "lines": [
+    "A 90-question paper in 120 minutes gives you about 80 seconds a question. A 100-question paper gives you 72 seconds.",
+    "- Do the questions you find easy first, then come back to the rest",
+    "- If a question takes more than two minutes, mark it and move on",
+    "- Scenario puzzles take longer: draw a quick table before you start",
+    "- Keep the last ten minutes to go back to marked questions",
+    "- With no negative marking, never leave a question blank: rule out what you can and choose"
+   ]
+  },
+  {
+   "id": "day",
+   "group": "Test day",
+   "title": "Before and during the test",
+   "lines": [
+    "## The day before",
+    "- Read your roll number slip closely: date, reporting time, centre and what to bring",
+    "- Visit or look up the centre so that you know the route",
+    "- Keep your documents ready, including your CNIC or the ID the slip asks for",
+    "## On the day",
+    "- Reach the centre early",
+    "- Do not take in anything the slip forbids, such as a phone or calculator",
+    "- Read the instructions on the paper and answer sheet before you start",
+    "## On a bubble sheet",
+    "- Fill each bubble completely and firmly, as the instructions say",
+    "- After every few questions, check that the question number matches the bubble row",
+    "- If you skip a question, leave its row empty so later answers stay in line"
+   ]
+  },
+  {
+   "id": "english",
+   "group": "Section tips",
+   "title": "English",
+   "lines": [
+    "## Sentence completion",
+    "- Cover the options, and guess the word from the sentence",
+    "- Look for signal words: although, because, however, therefore",
+    "- With two blanks, rule options out using one blank at a time",
+    "## Analogies",
+    "- Make a sentence linking the first pair: 'a pen is used for writing'",
+    "- Try the same sentence on each option",
+    "## Synonyms and antonyms",
+    "- Learn word roots and prefixes: mal- is bad, ben- is good, -cide is killing",
+    "- For antonyms, first decide what the word means, then look for its opposite. A common trap is a synonym in the options",
+    "## Comprehension",
+    "- Read the question first, then the passage",
+    "- The answer must come from the passage, not from what you already know",
+    "- Beware of options that are true in general but not stated in the text"
+   ]
+  },
+  {
+   "id": "analytical",
+   "group": "Section tips",
+   "title": "Analytical reasoning",
+   "lines": [
+    "## Scenario questions",
+    "- Turn the rules into a small table or diagram before reading the questions",
+    "- Note what must be true, and what only could be true",
+    "- For 'if' questions, make a fresh copy of your diagram",
+    "## Statement questions",
+    "- Find the conclusion first, then ask what it depends on",
+    "- An assumption is what the argument needs but does not say",
+    "- For syllogisms, draw circles and test whether the conclusion must follow, not just whether it could",
+    "## Series and codes",
+    "- Check differences first, then ratios, then alternate terms",
+    "- Write the alphabet with its numbers at the top of your rough work"
+   ]
+  },
+  {
+   "id": "quant",
+   "group": "Section tips",
+   "title": "Quantitative",
+   "lines": [
+    "- Calculators are generally not allowed, so practise mental arithmetic",
+    "- Learn squares to 20, cubes to 10, and common fractions as percentages",
+    "- Estimate first: often only one option is close",
+    "- Use the options: put them into the problem when algebra looks long",
+    "- Convert units before calculating",
+    "- In percentage questions, take care with what the percentage is 'of'",
+    "- Draw a quick sketch for every geometry question"
+   ]
+  },
+  {
+   "id": "subjects",
+   "group": "Section tips",
+   "title": "Science and computer subjects",
+   "lines": [
+    "- Questions come mostly from intermediate textbooks, so revise from your own books",
+    "- Keep a one-page formula sheet for Physics and Mathematics",
+    "- In Chemistry, know trends in the periodic table and common reaction types",
+    "- In Biology, expect many direct questions, so definitions and diagrams from the textbook pay off",
+    "- In Computer, practise tracing short programs by hand and writing basic SQL"
+   ]
+  },
+  {
+   "id": "gk",
+   "group": "Section tips",
+   "title": "General Knowledge, Islamic and Pakistan Studies",
+   "lines": [
+    "- Recruitment tests often include current affairs. This app avoids facts that go out of date, so also follow the news in the months before your test",
+    "- Learn the key dates of the Pakistan Movement in order",
+    "- Know the main features of the 1956, 1962 and 1973 constitutions",
+    "- For Islamic Studies, revise the five pillars, the main events of the Seerah and the basics of the Holy Quran",
+    "- Non-Muslim candidates are usually offered Ethics. Check your notice"
+   ]
+  }
+ ]
+}
